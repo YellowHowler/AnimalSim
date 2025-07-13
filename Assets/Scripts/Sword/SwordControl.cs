@@ -22,7 +22,7 @@ public class SwordControl : MonoBehaviour
     public Vector2 xRange = new Vector2(-2, 2);
     public Vector2 yRange = new Vector2(-2, 2);
 
-    private float screenToSwordRatio = 5f;
+    private float screenToSwordRatio = 7f;
 
     private Vector2 prevDragPos;
     private float dragTime = 0;
@@ -44,6 +44,7 @@ public class SwordControl : MonoBehaviour
     private Vector2 swordPos;
 
     private Vector2 swordTargetPos;
+    private Vector2 prevSwordTargetPos;
 
     private float dt;
 
@@ -56,7 +57,7 @@ public class SwordControl : MonoBehaviour
     void Start()
     {
         //Time.timeScale = 0.3f;
-
+        prevSwordTargetPos = Vector2.zero;
         swordTargetPos = Vector2.zero;
         swordForce = Vector2.zero;
         swordAcc = Vector2.zero;
@@ -76,8 +77,6 @@ public class SwordControl : MonoBehaviour
         screenPos = new Vector2(screenPos.x - Screen.width / 2, screenPos.y - Screen.height / 2);
         Vector2 worldPos = new Vector2(screenPos.x / Screen.width, screenPos.y / Screen.height) * screenToSwordRatio;
 
-        worldPos = Vector2.ClampMagnitude(worldPos, 2f);
-
         return worldPos;
     }
 
@@ -88,8 +87,10 @@ public class SwordControl : MonoBehaviour
         swordForce = Vector2.zero;
 
         Vector2 screenPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        prevSwordTargetPos = swordTargetPos;
         swordTargetPos = ScreenToWorld(screenPos);
-        
+
+        ClampSwordTarget();
         StepSword();
     }
 
@@ -103,6 +104,12 @@ public class SwordControl : MonoBehaviour
         swordForce += force;
     }
 
+    private void ClampSwordTarget()
+    {
+        swordTargetPos = Vector2.ClampMagnitude(swordTargetPos, 4);
+        swordPos = Vector2.ClampMagnitude(swordPos, 4.2f);
+    }
+
     private void StepSword()
     {
         Vector2 toTarget = swordTargetPos - swordPos;
@@ -111,9 +118,20 @@ public class SwordControl : MonoBehaviour
         float dirSimilarity = Vector2.Dot(toTarget.normalized, swordVel.normalized);
         swordForce = toTarget * 20;
         //swordForce *= Mathf.Clamp(0.05f / Mathf.Pow(dist, 8), 1, 1000);
-        
-        // Apply force
+
+        float swordTargetAcc = ((swordTargetPos - prevSwordTargetPos).magnitude) / dt * 15;
+
         swordAcc = swordForce / swordMass;
+        // Vector2 velDir = swordVel.normalized;
+        // if (swordVel.magnitude < 1e-5f) velDir = Vector3.zero;
+        // float accAlongVel = Vector3.Dot(swordAcc, velDir);
+        // float maxAcc = swordTargetAcc / dt;
+        // float clampedAccAlongVel = Mathf.Min(accAlongVel, maxAcc);
+        // Vector2 accParallel = clampedAccAlongVel * velDir;
+        // Vector2 accPerpendicular = swordAcc - (accAlongVel * velDir);
+        // swordAcc = accParallel + accPerpendicular;
+
+        // Apply force
         swordVel += swordAcc * dt;
         swordPos += swordVel * dt;
 
@@ -126,9 +144,9 @@ public class SwordControl : MonoBehaviour
         }
 
         // print("swordPos" + swordPos);
-            // print("swordVel" + swordVel);
+        // print("swordVel" + swordVel);
 
-            MoveObjects();
+        MoveObjects();
     }
 
     private void MoveObjects()

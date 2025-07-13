@@ -478,10 +478,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 180, y: 180}
+  pitchLimits: {x: -30, y: 30}
+  useTargetAngle: 1
+  targetYaw: 180
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -544,7 +548,7 @@ Transform:
   m_GameObject: {fileID: 72498571}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -772,6 +776,123 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120945248}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &180549580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 180549581}
+  - component: {fileID: 180549584}
+  - component: {fileID: 180549583}
+  - component: {fileID: 180549582}
+  m_Layer: 0
+  m_Name: Leg4Joint4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &180549581
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180549580}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 481523380}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &180549582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180549580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4a23c5ab78c413c8db92d4cd51a0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  angularVelocity: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  torque: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  angularAcceleration: {x: 0, y: 0, z: 0}
+  minSeparationDistance: 1
+  collisionStiffness: 50
+  isKinematic: 1
+  mass: 1
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 0, y: 0}
+  pitchLimits: {x: -70, y: 10}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -45
+  lineMaterial: {fileID: 0}
+  lineColor: {r: 0, g: 1, b: 0, a: 1}
+  lineWidth: 0.05
+--- !u!23 &180549583
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180549580}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 019a7079e99d54d76931051ea3e401a1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &180549584
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180549580}
+  m_Mesh: {fileID: 4300000, guid: f9a0e4afafea84e70be64a1c85ed508b, type: 2}
 --- !u!1 &247330446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,7 +1133,7 @@ Transform:
   m_GameObject: {fileID: 299868309}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1040,10 +1161,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -3, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 0, y: 0}
+  pitchLimits: {x: 0, y: 160}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: 45
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -1607,7 +1732,7 @@ Transform:
   m_GameObject: {fileID: 443974204}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1636,10 +1761,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -3, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: -20, y: 20}
+  pitchLimits: {x: -90, y: -20}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -45
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -1721,10 +1850,11 @@ Transform:
   m_GameObject: {fileID: 481523379}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 180549581}
   m_Father: {fileID: 1107298251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &481523381
@@ -1749,10 +1879,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 0, y: 0}
+  pitchLimits: {x: -160, y: -90}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -140
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -1834,10 +1968,11 @@ Transform:
   m_GameObject: {fileID: 494369231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 1167448846}
   m_Father: {fileID: 443974205}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &494369233
@@ -1862,10 +1997,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -3, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 0, y: 0}
+  pitchLimits: {x: -160, y: -90}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -140
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -1935,7 +2074,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &598385835
 Transform:
   m_ObjectHideFlags: 0
@@ -2306,9 +2445,13 @@ MonoBehaviour:
   isKinematic: 1
   mass: 1
   gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 0}
-  stiffness: 100
-  damping: 5
+  body: {fileID: 0}
+  constraintRotation: 0
+  yawLimits: {x: -359, y: 359}
+  pitchLimits: {x: -359, y: 359}
+  useTargetAngle: 0
+  targetYaw: 0
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -2583,7 +2726,7 @@ GameObject:
   - component: {fileID: 963194226}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2595,7 +2738,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -2603,7 +2746,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -2689,14 +2832,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972794468}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 299868310}
   m_Father: {fileID: 1055434939}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &972794470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2719,10 +2862,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -3, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: -20, y: 20}
+  pitchLimits: {x: -120, y: -20}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -140
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -3151,10 +3298,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: -100, y: -80}
+  pitchLimits: {x: 0, y: 0}
+  useTargetAngle: 1
+  targetYaw: -90
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -3236,7 +3387,7 @@ Transform:
   m_GameObject: {fileID: 1107298250}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -3265,10 +3416,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: -20, y: 20}
+  pitchLimits: {x: -90, y: -20}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -45
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -3322,6 +3477,123 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107298250}
   m_Mesh: {fileID: 4300000, guid: f9a0e4afafea84e70be64a1c85ed508b, type: 2}
+--- !u!1 &1167448845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1167448846}
+  - component: {fileID: 1167448849}
+  - component: {fileID: 1167448848}
+  - component: {fileID: 1167448847}
+  m_Layer: 0
+  m_Name: Leg3Joint4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1167448846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167448845}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.9, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 494369232}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167448847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167448845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4a23c5ab78c413c8db92d4cd51a0c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  angularVelocity: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  torque: {x: 0, y: 0, z: 0}
+  acceleration: {x: 0, y: 0, z: 0}
+  angularAcceleration: {x: 0, y: 0, z: 0}
+  minSeparationDistance: 1
+  collisionStiffness: 50
+  isKinematic: 1
+  mass: 1
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 0, y: 0}
+  pitchLimits: {x: -70, y: 10}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -45
+  lineMaterial: {fileID: 0}
+  lineColor: {r: 0, g: 1, b: 0, a: 1}
+  lineWidth: 0.05
+--- !u!23 &1167448848
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167448845}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 019a7079e99d54d76931051ea3e401a1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1167448849
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167448845}
+  m_Mesh: {fileID: 4300000, guid: f9a0e4afafea84e70be64a1c85ed508b, type: 2}
 --- !u!1 &1212820492
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,9 +3636,13 @@ MonoBehaviour:
   isKinematic: 1
   mass: 1
   gravity: {x: 0, y: 0, z: 0}
-  parent: {fileID: 0}
-  stiffness: 100
-  damping: 5
+  body: {fileID: 0}
+  constraintRotation: 0
+  yawLimits: {x: -359, y: 359}
+  pitchLimits: {x: -359, y: 359}
+  useTargetAngle: 0
+  targetYaw: 0
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -3664,7 +3940,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1367600189
 Transform:
   m_ObjectHideFlags: 0
@@ -4195,10 +4471,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: -90, y: -90}
+  pitchLimits: {x: 0, y: 0}
+  useTargetAngle: 1
+  targetYaw: -90
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -4222,7 +4502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 019a7079e99d54d76931051ea3e401a1, type: 2}
+  - {fileID: 2100000, guid: 9bb5ff99d203042cd9d5e6f5cb410db7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4280,7 +4560,7 @@ Transform:
   m_GameObject: {fileID: 1496735406}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.5}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -4310,10 +4590,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 180, y: 180}
+  pitchLimits: {x: -30, y: 30}
+  useTargetAngle: 1
+  targetYaw: 180
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -4337,7 +4621,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 019a7079e99d54d76931051ea3e401a1, type: 2}
+  - {fileID: 2100000, guid: 3d29b54aee12e46dc83b29fb53882450, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4395,7 +4679,7 @@ Transform:
   m_GameObject: {fileID: 1538155614}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4423,10 +4707,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 0, y: 0}
+  pitchLimits: {x: 0, y: 160}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: 45
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -4537,10 +4825,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 90, y: 90}
+  pitchLimits: {x: 0, y: 0}
+  useTargetAngle: 1
+  targetYaw: 90
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -4564,7 +4856,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 019a7079e99d54d76931051ea3e401a1, type: 2}
+  - {fileID: 2100000, guid: 9bb5ff99d203042cd9d5e6f5cb410db7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4876,10 +5168,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: 80, y: 100}
+  pitchLimits: {x: 0, y: 0}
+  useTargetAngle: 1
+  targetYaw: 90
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -4990,9 +5286,13 @@ MonoBehaviour:
   isKinematic: 1
   mass: 1
   gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 0}
-  stiffness: 100
-  damping: 5
+  body: {fileID: 0}
+  constraintRotation: 0
+  yawLimits: {x: -359, y: 359}
+  pitchLimits: {x: -359, y: 359}
+  useTargetAngle: 0
+  targetYaw: 0
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -5491,14 +5791,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132742512}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.5, z: 0}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1538155615}
   m_Father: {fileID: 1701333130}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &2132742514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5521,10 +5821,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 1
+  yawLimits: {x: -20, y: 20}
+  pitchLimits: {x: -120, y: -20}
+  useTargetAngle: 1
+  targetYaw: 0
+  targetPitch: -140
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -5687,10 +5991,14 @@ MonoBehaviour:
   collisionStiffness: 50
   isKinematic: 1
   mass: 1
-  gravity: {x: 0, y: -4, z: 0}
-  parent: {fileID: 88576964}
-  stiffness: 100
-  damping: 5
+  gravity: {x: 0, y: -5, z: 0}
+  body: {fileID: 88576964}
+  constraintRotation: 0
+  yawLimits: {x: -359, y: 359}
+  pitchLimits: {x: -359, y: 359}
+  useTargetAngle: 0
+  targetYaw: 0
+  targetPitch: 0
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
