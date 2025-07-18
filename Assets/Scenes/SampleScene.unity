@@ -1132,8 +1132,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299868309}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -1165,10 +1165,10 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: 0, y: 0}
-  pitchLimits: {x: 0, y: 160}
+  pitchLimits: {x: -90, y: 70}
   useTargetAngle: 1
   targetYaw: 0
-  targetPitch: 45
+  targetPitch: -45
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -1731,14 +1731,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443974204}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 494369232}
   m_Father: {fileID: 1477114096}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &443974206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1849,14 +1849,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 481523379}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.3, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 180549581}
   m_Father: {fileID: 1107298251}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &481523381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,10 +1883,10 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: 0, y: 0}
-  pitchLimits: {x: -160, y: -90}
+  pitchLimits: {x: -70, y: 0}
   useTargetAngle: 1
   targetYaw: 0
-  targetPitch: -140
+  targetPitch: -50
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -1967,14 +1967,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494369231}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.3, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1167448846}
   m_Father: {fileID: 443974205}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &494369233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,10 +2001,10 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: 0, y: 0}
-  pitchLimits: {x: -160, y: -90}
+  pitchLimits: {x: -70, y: 0}
   useTargetAngle: 1
   targetYaw: 0
-  targetPitch: -140
+  targetPitch: -50
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -2832,14 +2832,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 972794468}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 299868310}
   m_Father: {fileID: 1055434939}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &972794470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,10 +2866,10 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: -20, y: 20}
-  pitchLimits: {x: -120, y: -20}
+  pitchLimits: {x: -30, y: 70}
   useTargetAngle: 1
   targetYaw: 0
-  targetPitch: -140
+  targetPitch: -50
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -3268,14 +3268,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055434938}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -0.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 972794469}
   m_Father: {fileID: 2132776414}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1055434940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3301,8 +3301,8 @@ MonoBehaviour:
   gravity: {x: 0, y: -5, z: 0}
   body: {fileID: 88576964}
   constraintRotation: 1
-  yawLimits: {x: -100, y: -80}
-  pitchLimits: {x: 0, y: 0}
+  yawLimits: {x: -90, y: -90}
+  pitchLimits: {x: -10, y: 10}
   useTargetAngle: 1
   targetYaw: -90
   targetPitch: 0
@@ -3386,14 +3386,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1107298250}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 481523380}
   m_Father: {fileID: 1564180673}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1107298252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,7 +4475,7 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: -90, y: -90}
-  pitchLimits: {x: 0, y: 0}
+  pitchLimits: {x: -10, y: 10}
   useTargetAngle: 1
   targetYaw: -90
   targetPitch: 0
@@ -4679,7 +4679,7 @@ Transform:
   m_GameObject: {fileID: 1538155614}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.7}
+  m_LocalPosition: {x: 0, y: -1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4711,10 +4711,10 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: 0, y: 0}
-  pitchLimits: {x: 0, y: 160}
+  pitchLimits: {x: -90, y: 70}
   useTargetAngle: 1
   targetYaw: 0
-  targetPitch: 45
+  targetPitch: -45
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
@@ -4829,7 +4829,7 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: 90, y: 90}
-  pitchLimits: {x: 0, y: 0}
+  pitchLimits: {x: -10, y: 10}
   useTargetAngle: 1
   targetYaw: 90
   targetPitch: 0
@@ -5138,14 +5138,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1701333129}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0.8, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2132742513}
   m_Father: {fileID: 2132776414}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!114 &1701333131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5171,8 +5171,8 @@ MonoBehaviour:
   gravity: {x: 0, y: -5, z: 0}
   body: {fileID: 88576964}
   constraintRotation: 1
-  yawLimits: {x: 80, y: 100}
-  pitchLimits: {x: 0, y: 0}
+  yawLimits: {x: 90, y: 90}
+  pitchLimits: {x: -10, y: 10}
   useTargetAngle: 1
   targetYaw: 90
   targetPitch: 0
@@ -5791,14 +5791,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132742512}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: -1.2, z: 0}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 1.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1538155615}
   m_Father: {fileID: 1701333130}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &2132742514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5825,10 +5825,10 @@ MonoBehaviour:
   body: {fileID: 88576964}
   constraintRotation: 1
   yawLimits: {x: -20, y: 20}
-  pitchLimits: {x: -120, y: -20}
+  pitchLimits: {x: -30, y: 70}
   useTargetAngle: 1
   targetYaw: 0
-  targetPitch: -140
+  targetPitch: -50
   lineMaterial: {fileID: 0}
   lineColor: {r: 0, g: 1, b: 0, a: 1}
   lineWidth: 0.05
